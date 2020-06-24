@@ -38,19 +38,28 @@ header {
     background: $secondary-color;
     color: #fff;
   }
+}
 
-  a{
+%btn-shared{
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn{
+  &-light{
+    @extend %btn-shared;
+    background-color: $light-color;
     color: #333;
-    text-decoration: none;
-    background: $light-color;
-    padding: 0.5rem 0.75rem;
-    border-radius: 5px;
-    
-    
+  }
 
-    &:hover{
-      color: coral;
-    }
+  &-dark{
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: #fff;
   }
 }
 
